@@ -21,5 +21,13 @@ menuBar.addEventListener('click', function() {
   span2.classList.toggle('style');
   span3.classList.toggle('style-s');
   navbarNav.classList.toggle('active');
-  
 });
+
+//! style form search 
+const search = document.getElementById('search');
+const formSearch = document.getElementsByClassName('search-form')[0];
+const searchBox = document.getElementById('search-box');
+search.addEventListener('click', () => {
+  formSearch.classList.toggle('active');
+  searchBox.focus();
+})
