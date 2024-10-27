@@ -27,7 +27,8 @@ menuBar.addEventListener('click', function() {
 const search = document.getElementById('search');
 const formSearch = document.getElementsByClassName('search-form')[0];
 const searchBox = document.getElementById('search-box');
-search.addEventListener('click', () => {
+search.addEventListener('click', e => {
   formSearch.classList.toggle('active');
   searchBox.focus();
+  e.preventDefault(); // untuk memperbaiki bug agar saat diclick dimana aja tidak balik ke atas
 })
