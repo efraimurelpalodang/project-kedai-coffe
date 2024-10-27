@@ -1,13 +1,6 @@
 // Toggle class active
 const navbarNav = document.querySelector('.navbar-nav');
 
-// ketika humberger menu diclick
-// document.getElementById('menu-bar').onclick = () => {
-//   navbarNav.classList.toggle('active');
-// }
-
-// click diluar sidebar untuk menghilangkan nav
-// const menu = document.getElementById('menu-bar');
 document.addEventListener('click', function(e) {
   if(!menuBar.contains(e.target) && !navbarNav.contains(e.target)) {
     navbarNav.classList.remove('active');
