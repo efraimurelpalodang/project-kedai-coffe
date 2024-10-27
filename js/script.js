@@ -8,6 +8,10 @@ document.addEventListener('click', function(e) {
     span2.classList.remove('style');
     span3.classList.remove('style-s');
   }
+
+  if(!search.contains(e.target) && !formSearch.contains(e.target)) {
+    formSearch.classList.remove('active');
+  }
 });
 
 //! style humberger menu
