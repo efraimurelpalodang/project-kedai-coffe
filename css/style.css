@@ -331,6 +331,74 @@ body {
   margin-top: 1rem auto .5rem;
 }
 
+/* produk section start*/
+.produk .row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+  margin-top: 4rem;
+}
+
+.produk .row .produk-card {
+  text-align: center;
+  border: 1px solid #555;
+}
+
+.produk .row .produk-card .produk-icon {
+  display: flex;
+  justify-content: center;
+  gap: .5rem;
+}
+
+.produk .row .produk-card .produk-icon a {
+  width: 3rem;
+  height: 3rem;
+  color: #fff;
+  margin: .3rem;
+  border: 2px solid #555;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .3s;
+}
+
+.produk .row .produk-card .produk-icon a:hover {
+  background-color: var(--primary);
+  border: 2px solid var(--primary);
+}
+
+.produk .produk-card .produk-image {
+  padding: 1rem 0;
+}
+
+.produk .produk-card .produk-image img {
+  height: 25rem;
+  width: 500px;
+}
+
+.produk .produk-card .produk-content h3 {
+  font-size: 1.7rem;
+}
+
+.produk .produk-card .produk-content .bx-star {
+  padding: 0.2rem;
+}
+
+.produk .produk-card .produk-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  object-fit: cover;
+}
+
+.produk .produk-card .produk-price span{
+  text-decoration: line-through;
+  font-weight: lighter;
+  font-size: .9rem;
+  color: crimson;
+}
+
 /* Contact section */
 .contact .row {
   display: flex;
@@ -466,6 +534,12 @@ footer .credit a {
     transform: scaleX(0.2);
   }
 
+  .produk .produk-card .produk-image img {
+    height: 25rem;
+    width: 80%;
+    object-fit: cover;
+  }
+
 }
 
 
@@ -549,6 +623,12 @@ footer .credit a {
 
   .contact .row form {
     margin-top: -5rem;
+  }
+
+  .produk .produk-card .produk-image img {
+    height: 25rem;
+    width: 90%;
+    object-fit: cover;
   }
 
 }
