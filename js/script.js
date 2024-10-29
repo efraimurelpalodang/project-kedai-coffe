@@ -12,6 +12,10 @@ document.addEventListener('click', function(e) {
   if(!search.contains(e.target) && !formSearch.contains(e.target)) {
     formSearch.classList.remove('active');
   }
+
+  if(!shop.contains(e.target) && !shopCard.contains(e.target)) {
+    shopCard.classList.remove('active');
+  }
 });
 
 //! style humberger menu
@@ -36,3 +40,10 @@ search.addEventListener('click', e => {
   searchBox.focus();
   e.preventDefault(); // untuk memperbaiki bug agar saat diclick dimana aja tidak balik ke atas
 })
+
+//! style shoping card
+const shop = document.getElementById('shoping-card-button');
+const shopCard = document.querySelector('.shoping-card');
+shop.addEventListener('click', () => {
+  shopCard.classList.toggle('active');
+});
