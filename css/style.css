@@ -144,12 +144,17 @@ body {
 .shoping-card {
   position: absolute;
   top: 100%;
-  right: 0;
+  right: -100%;
   height: 100vh;
   width: 25rem;
   padding: 0 1.5rem;
   color: #fff;
   background-color: rgba(103,71,54, 0.9);
+  transition: .3s linear;
+}
+
+.shoping-card.active {
+  right: 0;
 }
 
 .shoping-card .card-item {
