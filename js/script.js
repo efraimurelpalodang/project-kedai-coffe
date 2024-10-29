@@ -44,6 +44,7 @@ search.addEventListener('click', e => {
 //! style shoping card
 const shop = document.getElementById('shoping-card-button');
 const shopCard = document.querySelector('.shoping-card');
-shop.addEventListener('click', () => {
+shop.addEventListener('click', e => {
   shopCard.classList.toggle('active');
+  e.preventDefault();
 });
