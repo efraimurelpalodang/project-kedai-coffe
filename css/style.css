@@ -375,6 +375,7 @@ body {
 .produk .produk-card .produk-image img {
   height: 25rem;
   width: 500px;
+  object-fit: cover;
 }
 
 .produk .produk-card .produk-content h3 {
