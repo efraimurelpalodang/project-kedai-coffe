@@ -370,7 +370,9 @@ body {
 
 .menu .row .menu-card img {
   border-radius: 50%;
-  /* width: 15%; */
+  width: 15rem;
+  height: 15rem;
+  object-fit: cover;
 }
 
 .menu .row .menu-card .menu-card-tittle {
