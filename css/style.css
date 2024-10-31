@@ -420,7 +420,8 @@ body {
   padding: 1rem 0;
 }
 
-.produk .produk-card .produk-image img {
+.produk .produk-card .produk-image img,
+.modal .modal-container .modal-content img {
   height: 25rem;
   width: 500px;
   object-fit: cover;
