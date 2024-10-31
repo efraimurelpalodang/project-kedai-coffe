@@ -43,7 +43,7 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 9999;
+  z-index: 9;
 }
 
 .navbar .navbar-logo {
@@ -420,8 +420,7 @@ body {
   padding: 1rem 0;
 }
 
-.produk .produk-card .produk-image img,
-.modal .modal-container .modal-content img {
+.produk .produk-card .produk-image img {
   height: 25rem;
   width: 500px;
   object-fit: cover;
@@ -535,6 +534,49 @@ footer .credit a {
   color: var(--bg);
   font-weight: 700;
 }
+
+/*! modal Box */
+/* Item detail */
+.modal {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal .modal-container {
+  position: relative;
+  background-color: #fefefe;
+  color: var(--bg);
+  margin: 15% auto;
+  padding: 1.2rem;
+  border: 1px solid #777;
+  width: 80%;
+}
+
+.modal .modal-container .close-icon {
+  position: absolute;
+  right: 1rem;
+}
+
+.modal-container .modal-content {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.modal-content img {
+  height: 20rem;
+  width: 20rem;
+  object-fit: cover;
+  margin-right: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
 
 /* Media Queries */
 
