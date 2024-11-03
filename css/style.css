@@ -549,6 +549,11 @@ footer .credit a {
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.7);
   display: none;
+  transition: .3s;
+}
+
+.modal.active {
+  display: flex;
 }
 
 .modal .modal-container {
@@ -559,6 +564,8 @@ footer .credit a {
   padding: 1.2rem 1rem;
   border: 1px solid #777;
   width: 80%;
+  transform: scale(0);
+  transition: .5s;
 }
 
 .modal .modal-container .close-icon {

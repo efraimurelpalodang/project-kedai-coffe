@@ -48,3 +48,21 @@ shop.addEventListener('click', e => {
   shopCard.classList.toggle('active');
   e.preventDefault();
 });
+
+//! style menampilkan detail produk
+const eyes = document.querySelector('#produk .bx-show');
+const closeIDM = document.querySelector('#produk .bx-show');
+const detail = document.getElementById('item-detail-modal');
+const conIDM = document.querySelector('#item-detail-modal .modal-container');
+eyes.addEventListener('click', e => {
+  detail.classList.toggle('active');
+  conIDM.style.transform = 'scale(1)';
+  e.preventDefault();
+});
+
+//! saat tombol close detail di click
+// closeIDM.addEventListener('click', e => {
+//   detail.classList.toggle('active');
+//   conIDM.style.transform = 'scale(0)';
+//   e.preventDefault();
+// });
