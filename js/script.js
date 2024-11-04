@@ -51,18 +51,23 @@ shop.addEventListener('click', e => {
 
 //! style menampilkan detail produk
 const eyes = document.querySelector('#produk .bx-show');
-const closeIDM = document.querySelector('#produk .bx-show');
+const closeIDM = document.querySelectorAll('#item-detail-modal .close-icon');
 const detail = document.getElementById('item-detail-modal');
-const conIDM = document.querySelector('#item-detail-modal .modal-container');
-eyes.addEventListener('click', e => {
-  detail.classList.toggle('active');
-  conIDM.style.transform = 'scale(1)';
+
+eyes.onclick = e => {
+  detail.style.display = 'flex';
   e.preventDefault();
-});
+}
 
 //! saat tombol close detail di click
-// closeIDM.addEventListener('click', e => {
-//   detail.classList.toggle('active');
-//   conIDM.style.transform = 'scale(0)';
-//   e.preventDefault();
-// });
+document.querySelector('#item-detail-modal .close-icon').onclick = e => {
+  detail.style.display = 'none';
+  e.preventDefault()
+}
+
+//! klik diluar modal
+window.onclick = e => {
+  if( e.target === detail ) {
+    detail.style.display = 'none';
+  }
+}
