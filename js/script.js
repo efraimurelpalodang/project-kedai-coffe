@@ -50,14 +50,17 @@ shop.addEventListener('click', e => {
 });
 
 //! style menampilkan detail produk
-const eyes = document.querySelector('#produk .bx-show');
+const eyes = document.querySelectorAll('#produk .bx-show');
 const closeIDM = document.querySelectorAll('#item-detail-modal .close-icon');
 const detail = document.getElementById('item-detail-modal');
 
-eyes.onclick = e => {
-  detail.style.display = 'flex';
-  e.preventDefault();
-}
+//! melooping semua tombol detail
+eyes.forEach( btn => {
+  btn.onclick = e => {
+    detail.style.display = 'flex';
+    e.preventDefault();
+  }
+})
 
 //! saat tombol close detail di click
 document.querySelector('#item-detail-modal .close-icon').onclick = e => {
