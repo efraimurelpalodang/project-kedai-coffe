@@ -622,6 +622,14 @@ footer .credit a {
 
 /* Media Queries */
 
+/* tablet pro*/
+@media (max-width: 1024px) {
+  .modal-container {
+    height: 18%;
+  }
+}
+
+
 /* tablet */
 @media (max-width: 870px) {
   
@@ -675,7 +683,6 @@ footer .credit a {
   }
 
   .modal-container {
-    top: 25%;
     height: 40%;
   }
 
@@ -775,7 +782,6 @@ footer .credit a {
   }
 
   .modal-container {
-    top: 30%;
     height: 25%;
   }
 
@@ -792,7 +798,6 @@ footer .credit a {
   }
 
   .modal-container {
-    top: 30%;
     height: 35%;
   }
 
