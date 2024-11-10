@@ -243,7 +243,6 @@ body {
 
 .hero .mask-container {
   position: absolute;
-  /* background-color: red; */
   -webkit-mask-image: url('../img/maskSvg.png');
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-size: cover;
