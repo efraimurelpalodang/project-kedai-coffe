@@ -438,14 +438,6 @@ body {
   object-fit: cover;
 }
 
-.produk .produk-card .produk-price span,
-.modal-content .box .produk-price span {
-  text-decoration: line-through;
-  font-weight: lighter;
-  font-size: .9rem;
-  color: crimson;
-}
-
 /* Contact section */
 .contact .row {
   display: flex;

@@ -190,7 +190,7 @@
     <!-- Menu section finish -->
 
     <!-- product section start -->
-    <section class="produk" id="produk">
+    <section class="produk" id="produk" x-data="products">
       <h2><span>Produk Unggulan</span> Kami</h2>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed,
@@ -198,42 +198,26 @@
       </p>
 
       <div class="row">
-        <div class="produk-card">
-          <div class="produk-icon">
-            <a href="#"><i class="bx bx-shopping-bag bx-sm"></i></a>
-            <a href="#"><i class="bx bx-show bx-sm"></i></a>
+        <template x-for="(item, index) in items" x-key="index">
+          <div class="produk-card">
+            <div class="produk-icon">
+              <a href="#"><i class="bx bx-shopping-bag bx-sm"></i></a>
+              <a href="#"><i class="bx bx-show bx-sm"></i></a>
+            </div>
+            <div class="produk-image">
+              <img :src="`img/products/${item.img}`" :alt="item.name" />
+            </div>
+            <div class="produk-content">
+              <h3 x-text="item.name"></h3>
+              <i class="bx bxs-star bx-sm" style="color: #b6895b"></i>
+              <i class="bx bxs-star bx-sm" style="color: #b6895b"></i>
+              <i class="bx bxs-star bx-sm" style="color: #b6895b"></i>
+              <i class="bx bxs-star bx-sm" style="color: #b6895b"></i>
+              <i class="bx bx-star bx-sm"></i>
+            </div>
+            <div class="produk-price"><span x-text="rupiah(item.price)"></span></div>
           </div>
-          <div class="produk-image">
-            <img src="img/products/produk.jpg" alt="product 1" />
-          </div>
-          <div class="produk-content">
-            <h3>Coffe Beans one</h3>
-            <i class="bx bxs-star bx-sm" style="color: #b6895b"></i>
-            <i class="bx bxs-star bx-sm" style="color: #b6895b"></i>
-            <i class="bx bxs-star bx-sm" style="color: #b6895b"></i>
-            <i class="bx bxs-star bx-sm" style="color: #b6895b"></i>
-            <i class="bx bx-star bx-sm"></i>
-          </div>
-          <div class="produk-price">IDR 30K <span>IDR 55K</span></div>
-        </div>
-        <div class="produk-card">
-          <div class="produk-icon">
-            <a href="#"><i class="bx bx-shopping-bag bx-sm"></i></a>
-            <a href="#"><i class="bx bx-show bx-sm"></i></a>
-          </div>
-          <div class="produk-image">
-            <img src="img/products/2.jpg" alt="product 1" />
-          </div>
-          <div class="produk-content">
-            <h3>Coffe Acme one</h3>
-            <i class="bx bxs-star bx-sm" style="color: #b6895b"></i>
-            <i class="bx bxs-star bx-sm" style="color: #b6895b"></i>
-            <i class="bx bxs-star bx-sm" style="color: #b6895b"></i>
-            <i class="bx bxs-star-half bx-sm" style="color: #b6895b"></i>
-            <i class="bx bx-star bx-sm"></i>
-          </div>
-          <div class="produk-price">IDR 45K <span>IDR 105K</span></div>
-        </div>
+        </template>
       </div>
     </section>
     <!-- product section start -->
