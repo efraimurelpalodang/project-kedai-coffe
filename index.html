@@ -32,8 +32,9 @@
       <div class="navbar-extra">
         <a href="#" id="search"><i class="bx bx-search-alt-2 bx-sm"></i></a>
         <a href="#" id="shoping-card-button"
-          ><i class="bx bx-shopping-bag bx-sm bx-tada-hover"></i
-        ></a>
+          ><i class="bx bx-shopping-bag bx-sm bx-tada-hover"></i>
+          <span class="quantity-badge">10</span>
+        </a>
         <div class="bar-menu">
           <span></span>
           <span></span>
@@ -51,7 +52,7 @@
       <!-- shoping card start -->
       <div class="shoping-card">
         <div class="card-item">
-          <img src="img/products/produk.jpg" alt="produk 1" />
+          <img src="img/products/2.jpg" alt="produk 1" />
           <div class="item-detail">
             <h3>Produk 1</h3>
             <div class="item-price">IDR 30K</div>
@@ -59,7 +60,7 @@
           <i class="bx bxs-trash bx-sm remove-item"></i>
         </div>
         <div class="card-item">
-          <img src="img/products/produk.jpg" alt="produk 1" />
+          <img src="img/products/2.jpg" alt="produk 1" />
           <div class="item-detail">
             <h3>Produk 1</h3>
             <div class="item-price">IDR 30K</div>
@@ -67,7 +68,7 @@
           <i class="bx bxs-trash bx-sm remove-item"></i>
         </div>
         <div class="card-item">
-          <img src="img/products/produk.jpg" alt="produk 1" />
+          <img src="img/products/2.jpg" alt="produk 1" />
           <div class="item-detail">
             <h3>Produk 1</h3>
             <div class="item-price">IDR 30K</div>
@@ -201,7 +202,7 @@
         <template x-for="(item, index) in items" x-key="index">
           <div class="produk-card">
             <div class="produk-icon">
-              <a href="#"><i class="bx bx-shopping-bag bx-sm"></i></a>
+              <a href="#" @click.prevent="$store.cart.add(item)"><i class="bx bx-shopping-bag bx-sm"></i></a>
               <a href="#"><i class="bx bx-show bx-sm"></i></a>
             </div>
             <div class="produk-image">

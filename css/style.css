@@ -141,6 +141,24 @@ body {
 }
 /* finish navbar search form */
 
+/* shoping card */
+
+#shoping-card-button {
+  position: relative;
+}
+
+#shoping-card-button .quantity-badge {
+  display: inline-block;
+  padding: 2px 5px;
+  background-color: red;
+  border-radius: 50%;
+  font-size: 0.5rem;
+  position: absolute;
+  top: 13px;
+  right: -10px;
+  font-weight: 700;
+} 
+
 .shoping-card {
   position: absolute;
   top: 100%;
